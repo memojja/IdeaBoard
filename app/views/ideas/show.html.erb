@@ -1,3 +1,8 @@
+<%= flash.each do |message|  %>
+
+    <%=message%>
+    <%end%>
+
 Display Idea<br /><br />
 
 <b>ID </b><%= @idea.id %><br />
@@ -5,7 +10,8 @@ Display Idea<br /><br />
 <b>Description </b><%= @idea.description %><br />
 
 <br/><br/>
-<%=link_to "geri gel",idea_path%>
-<%=link_to "update",edit_idea_path(idea)%>
-<%=link_to idea.title,idea_path(idea)%>
 
+<%=link_to "geri gel",idea_path%>
+<%=link_to "update",edit_idea_path(@idea)%>
+<%=link_to "sil",idea_path(@idea),method: :delete %>
+<%=link_to "ekle", new_idea_path %>

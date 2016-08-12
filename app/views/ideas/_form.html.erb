@@ -1,5 +1,17 @@
-<input type="hidden"  name="authenticity_token" value="<%= form_authenticity_token %>" >
-<input type="text" name="title" value="<%=@idea.title %>"/><br>
-<input type="text" name="planned_to" value="<%=@idea.planned_to %>" /><br>
-<textarea name="description"> <%=@idea.description %> </textarea><br>
-<button type="submit" value="tikla" >tıkla</button>
+
+
+<%= form_for @idea do |f| %>
+
+    <%= f.label :title %>
+    <%= f.text_field :title,placeholder:"title" %>
+    <br/>
+    <%= f.label :description %>
+    <%= f.text_area :description,placeholder:"description",rows:10 %>
+    <br/>
+    <%= f.label :planned_to %>
+    <%= f.date_select :planned_to,placegolder: "date" %>
+    <br/>
+    <%= f.submit "gonder" %>
+
+<% end %>
+
