@@ -35,6 +35,10 @@ class IdeasController < ApplicationController
 
 	end
 
+	def destroy
+
+	end
+
 	def strong_params
 		params.permit(:title,:description,:planned_to)
 	end

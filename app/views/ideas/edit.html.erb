@@ -2,10 +2,8 @@
 
 <form action="<%=idea_path(@idea) %>" method="post" >
   <input type="hidden"  name="_method" value="put" >
-  <input type="text" name="title" value="<%=@idea.title %>"/><br>
-  <input type="text" name="planned_to" value="<%=@idea.planned_to %>" /><br>
-  <textarea name="description"> <%=@idea.description %> </textarea><br>
-  <button type="submit" value="tikla" >tıkla</button>
+  <%=render "form" %>
+
 
   <% if @idea.errors.any? %>
       <h3> <%= @idea.errors.full_messages.join(",") %></h3>
