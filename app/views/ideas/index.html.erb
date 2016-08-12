@@ -1,6 +1,8 @@
 <% @ideas.each do |idea| %>
   <b>ID </b><%= idea.id %>
   <b>Title </b>
-  <a href="/ideas/<%= idea.id %>"><%= idea.title %></a>
+
+    <%=link_to idea.title,idea_path(idea)%>
+
   <b>Description </b><%= idea.description %><br>
 <% end %>
