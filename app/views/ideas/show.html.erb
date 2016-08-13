@@ -8,6 +8,7 @@ Display Idea<br /><br />
 <b>ID </b><%= @idea.id %><br />
 <b>Title </b><%= @idea.title %><br />
 <b>Description </b><%= @idea.description %><br />
+<b>Cateogry </b><%= @idea.category.title %><br />
 
 <br/><br/>
 
@@ -15,3 +16,4 @@ Display Idea<br /><br />
 <%=link_to "update",edit_idea_path(@idea)%>
 <%=link_to "sil",idea_path(@idea),method: :delete %>
 <%=link_to "ekle", new_idea_path %>
+
